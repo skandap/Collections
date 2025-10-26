@@ -1,0 +1,1218 @@
+{
+	"info": {
+		"_postman_id": "e425332c-e2a6-4d54-95d0-f08c187b36d3",
+		"name": "Train_Booking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31193146"
+	},
+	"item": [
+		{
+			"name": "User_Service",
+			"item": [
+				{
+					"name": "RegisterUser",
+					"item": [
+						{
+							"name": "CreateUser(+)",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Admin Five\",\n  \"email\": \"admin.five@example.com\",\n  \"phoneNumber\": \"7353011413\",\n  \"age\": 40,\n  \"password\": \"Admin@1234\",\n  \"role\": \"ADMIN\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/user/register-user",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"user",
+										"register-user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DuplicateLoginUser(+)",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john.doe@example.com\",\n  \"phoneNumber\": \"1234567890\",\n  \"age\": 25,\n  \"password\": \"Password@123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/user/register-user",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"user",
+										"register-user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "name(-)",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"John123!@#\",\n  \"email\": \"john.doe@example.com\",\n  \"phoneNumber\": \"1234567890\",\n  \"age\": 25,\n  \"password\": \"Password@123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/user/register-user",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"user",
+										"register-user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Email(-)",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john.doe.com\",\n  \"phoneNumber\": \"1234567890\",\n  \"age\": 25,\n  \"password\": \"Password@123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/user/register-user",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"user",
+										"register-user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PhoneNumber(-)",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john.doe@example.com\",\n  \"phoneNumber\": \"12345abc\",\n  \"age\": 25,\n  \"password\": \"Password@123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/user/register-user",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"user",
+										"register-user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Age(-)",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john.doe@example.com\",\n  \"phoneNumber\": \"1234567890\",\n  \"age\": 0,\n  \"password\": \"Password@123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/user/register-user",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"user",
+										"register-user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Pasword(-)",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john.doe@example.com\",\n  \"phoneNumber\": \"1234567890\",\n  \"age\": 25,\n  \"password\": \"password\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/user/register-user",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"user",
+										"register-user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Mandatory(-)",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"\",\n  \"email\": \"\",\n  \"phoneNumber\": \"\",\n  \"age\": null,\n  \"password\": \"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/user/register-user",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"user",
+										"register-user"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "UserProfile",
+					"item": [
+						{
+							"name": "userProfile",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNTQ4Mzk0OCIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzU5OTQ0MzcwLCJleHAiOjE3NjAwMzA3NzB9.80paeLe9ES6KNi-mGWSpzmtR5LunyG2x6sbQ1Ic_mBAS3fx1X3N2y-GQYwprgI5uP0KTeaq4k1s7_T051dNBKQ",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL}}/user/profile",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"user",
+										"profile"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "LoginUser",
+					"item": [
+						{
+							"name": "LoginUser",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"email\":\"admin.two@example.com\",\n   \"password\":\"Admin@234\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/user/login-user",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"user",
+										"login-user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Nologin(-)",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"userId\":\"3051175\",\n   \"password\":\"StrongPass@123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/user/login-user",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"user",
+										"login-user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Password(-)",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"userId\":\"30511756\",\n   \"password\":\"StrongPass@13\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/user/login-user",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"user",
+										"login-user"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "ModifyUserStatus",
+					"item": [
+						{
+							"name": "ModifyStatus",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNTQ4Mzk0OCIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzU5OTQ0MzcwLCJleHAiOjE3NjAwMzA3NzB9.80paeLe9ES6KNi-mGWSpzmtR5LunyG2x6sbQ1Ic_mBAS3fx1X3N2y-GQYwprgI5uP0KTeaq4k1s7_T051dNBKQ"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\":\"Blocked\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/admin/modify/15483948",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"admin",
+										"modify",
+										"15483948"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "NoUserFound(-)",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4OTE1MjY3MCIsImlhdCI6MTc1OTY3Nzk1MCwiZXhwIjoxNzU5NjgxNTUwfQ.5IiJJhmQZYv4z0CuPhxP5kiKGB0-Y6B396hsOKg8Tkg"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"status\":\"Blocked\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/admin/modify/891526701",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"admin",
+										"modify",
+										"891526701"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "InquireUserDetails",
+					"item": [
+						{
+							"name": "InquireUser",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1MDg1NTEzNSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc1OTk0NDc3OSwiZXhwIjoxNzYwMDMxMTc5fQ.dntgxbQhoT1Quhy3RAm73P-lsflUX-4W2rGcHhm200rsr23Q4Bw24LNKcbco7PFvz96h7TO9a6KOrFxZKAuYnw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL}}/admin/user/14969234",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"admin",
+										"user",
+										"14969234"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UserNotFound(-)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8081/admin/user/364371031",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"admin",
+										"user",
+										"364371031"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "InquireUsers",
+					"item": [
+						{
+							"name": "InquireUsers",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1MDg1NTEzNSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc1OTk0NDc3OSwiZXhwIjoxNzYwMDMxMTc5fQ.dntgxbQhoT1Quhy3RAm73P-lsflUX-4W2rGcHhm200rsr23Q4Bw24LNKcbco7PFvz96h7TO9a6KOrFxZKAuYnw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8081/admin/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"admin",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "StatusFilteration",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8081/admin/users?status=Blocked",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"admin",
+										"users"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "Blocked"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Train_Service",
+			"item": [
+				{
+					"name": "createTrain",
+					"item": [
+						{
+							"name": "AddTrain",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"trainName\": \"Intercity Express\",\n  \"trainNumber\": \"12680\",\n  \"sourceStation\": \"Chennai\",\n  \"destinationStation\": \"Coimbatore\",\n  \"departureTime\": \"07:15\",\n  \"arrivalTime\": \"13:45\",\n  \"totalSeats\": 750,\n  \"availableSeats\": 750,\n  \"ticketPrice\": 350\n}\n"
+								},
+								"url": {
+									"raw": "{{baseURL}}/train_service/add_train",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"train_service",
+										"add_train"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Mandatory(-)",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"trainName\": \"\",\n  \"trainNumber\": \"\",\n  \"sourceStation\": \"\",\n  \"destinationStation\": \"\",\n  \"departureTime\": \"\",\n  \"arrivalTime\": \"\",\n  \"totalSeats\": \"\",\n  \"availableSeats\": \"\",\n  \"ticketPrice\": \"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/train_service/add_train",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"train_service",
+										"add_train"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "NegativeValues(-)",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"trainName\": \"Invalid Express\",\n  \"trainNumber\": \"99999\",\n  \"sourceStation\": \"Test City\",\n  \"destinationStation\": \"Another City\",\n  \"departureTime\": \"12:30\",\n  \"arrivalTime\": \"15:00\",\n  \"totalSeats\": -100,\n  \"availableSeats\": -50,\n  \"ticketPrice\": -250\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/train_service/add_train",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"train_service",
+										"add_train"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DuplicateTrain(-)",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"trainName\": \"Duplicate Express\",\n  \"trainNumber\": \"23887\",\n  \"sourceStation\": \"Bangalore\",\n  \"destinationStation\": \"Mysore\",\n  \"departureTime\": \"09:00\",\n  \"arrivalTime\": \"11:30\",\n  \"totalSeats\": 600,\n  \"availableSeats\": 600,\n  \"ticketPrice\": 230\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/train_service/add_train",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"train_service",
+										"add_train"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Available Seats > Total Seats",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"trainName\": \"Test Express\",\n  \"trainNumber\": \"55535\",\n  \"sourceStation\": \"City A\",\n  \"destinationStation\": \"City B\",\n  \"departureTime\": \"10:00\",\n  \"arrivalTime\": \"12:30\",\n  \"totalSeats\": 100,\n  \"availableSeats\": 150,\n  \"ticketPrice\": 200\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/train_service/add_train",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"train_service",
+										"add_train"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "updateTrain",
+					"item": [
+						{
+							"name": "modifyTrain",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"trainName\": \"Vande Bharat Express\",\n  \"sourceStation\": \"Bangalore\",\n  \"destinationStation\": \"Hubali\",\n  \"departureTime\": \"06:30\",\n  \"arrivalTime\": \"08:45\",\n  \"totalSeats\": 700,\n  \"availableSeats\":700,\n  \"ticketPrice\": 1000\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/train_service/update_train/23887",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"train_service",
+										"update_train",
+										"23887"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SeatVal(-)",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"trainName\": \"Vande Bharat Express\",\n  \"sourceStation\": \"Bangalore\",\n  \"destinationStation\": \"Hubali\",\n  \"departureTime\": \"06:30\",\n  \"arrivalTime\": \"08:45\",\n  \"totalSeats\": 700,\n  \"availableSeats\":1700,\n  \"ticketPrice\": 1000\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/train_service/update_train/23887",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"train_service",
+										"update_train",
+										"23887"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "TrainNotFound(-)",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"trainName\": \"Vande Bharat Express\",\n  \"sourceStation\": \"Bangalore\",\n  \"destinationStation\": \"Hubali\",\n  \"departureTime\": \"06:30\",\n  \"arrivalTime\": \"08:45\",\n  \"totalSeats\": 700,\n  \"availableSeats\":700,\n  \"ticketPrice\": 1000\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/train_service/update_train/238872",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"train_service",
+										"update_train",
+										"238872"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "DeleteTrain",
+					"item": [
+						{
+							"name": "deleteTrain",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/train_service/delete_train/23887",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"train_service",
+										"delete_train",
+										"23887"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "NoTrainFound(-)",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/train_service/delete_train/238877",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"train_service",
+										"delete_train",
+										"238877"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "InquireTrainDetails",
+					"item": [
+						{
+							"name": "FetchTrainDetails",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/train_service/fetch_train/12680",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"train_service",
+										"fetch_train",
+										"12680"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "InvalidId(-)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/train_service/fetch_train/126801",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"train_service",
+										"fetch_train",
+										"126801"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "InquireTrainList",
+					"item": [
+						{
+							"name": "InquireList",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/train_service/fetch_train",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"train_service",
+										"fetch_train"
+									],
+									"query": [
+										{
+											"key": "sourceStation",
+											"value": "Bangalore",
+											"disabled": true
+										},
+										{
+											"key": "destinationStation",
+											"value": "Mysore",
+											"disabled": true
+										},
+										{
+											"key": "minPrice",
+											"value": "200",
+											"disabled": true
+										},
+										{
+											"key": "maxPrice",
+											"value": "1000",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SourceFilteration(+)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/train_service/fetch_train?sourceStation=Bangalore",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"train_service",
+										"fetch_train"
+									],
+									"query": [
+										{
+											"key": "sourceStation",
+											"value": "Bangalore"
+										},
+										{
+											"key": "destinationStation",
+											"value": "Mysore",
+											"disabled": true
+										},
+										{
+											"key": "minPrice",
+											"value": "200",
+											"disabled": true
+										},
+										{
+											"key": "maxPrice",
+											"value": "1000",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DestinationFilteration(+)",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/train_service/fetch_train?destinationStation=Mysore",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"train_service",
+										"fetch_train"
+									],
+									"query": [
+										{
+											"key": "sourceStation",
+											"value": "Bangalore",
+											"disabled": true
+										},
+										{
+											"key": "destinationStation",
+											"value": "Mysore"
+										},
+										{
+											"key": "minPrice",
+											"value": "200",
+											"disabled": true
+										},
+										{
+											"key": "maxPrice",
+											"value": "1000",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PriceFilter(+)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/train_service/fetch_train?minPrice=200&maxPrice=350",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"train_service",
+										"fetch_train"
+									],
+									"query": [
+										{
+											"key": "sourceStation",
+											"value": "Bangalore",
+											"disabled": true
+										},
+										{
+											"key": "destinationStation",
+											"value": "Mysore",
+											"disabled": true
+										},
+										{
+											"key": "minPrice",
+											"value": "200"
+										},
+										{
+											"key": "maxPrice",
+											"value": "350"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
