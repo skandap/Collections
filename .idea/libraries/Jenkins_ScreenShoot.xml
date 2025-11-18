@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Jenkins_ScreenShoot">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Jenkins_ScreenShoot.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
