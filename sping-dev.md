@@ -78,8 +78,7 @@ Understand what the API needs to do and all related dependencies before starting
 - Version control via **Git** (feature branching and pull requests).
 
 ### 12. Post-Deployment Monitoring
-- Enable **Spring Boot Actuator** (`/actuator/health`, `/actuator/metrics`).  
-- Use **Prometheus/Grafana** or **ELK stack** for monitoring and alerting.  
+- Enable **Spring Boot Actuator** (`/actuator/health`, `/actuator/metrics`).    
 - Include **correlation IDs** for traceability across microservices.
 
 ---
@@ -120,3 +119,4 @@ This checklist ensures every Spring Boot API is:
 - Ready for production deployment  
 
 > **Tip:** Always code with the latest Java features (records, pattern matching, sealed classes, etc.) and follow clean architecture principles.
+
